@@ -5,7 +5,8 @@
             <li>
                 <ul *ngFor="let person of persons">
                     Name: {{ person.name }}<br />
-                    Group: {{ person.group.name }}
+                    Group: {{ person.group.name }}<br />
+                    Date added: {{ person.createdAt  | date :  "dd/MM/y hh:mm" }}
                 </ul>
             </li>
         </mat-card-content>

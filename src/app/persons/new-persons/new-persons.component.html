@@ -1,1 +1,27 @@
-<p>new-persons works!</p>
+<div class="main-container">
+    <mat-card>
+        <mat-card-content>
+            <h3>Create new person:</h3>
+            <form [formGroup]="newPersonForm" (ngSubmit)="onSubmit()">
+                <!-- Name -->
+                <mat-form-field appearance="outline" class="fromGroup">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput placeholder="Name" formControlName="name" maxlength="100" required>
+                    <mat-error *ngIf="name.hasError('required')">Name is required</mat-error>
+                </mat-form-field>
+                <!-- Group -->
+                <mat-form-field appearance="outline" class="fromGroup">
+                    <mat-label>Group</mat-label>
+                    <mat-select formControlName="group" required>
+                        <mat-option *ngFor="let group of groups" [value]="group.id">
+                            {{ group.name }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="group.hasError('required')">Select a group</mat-error>
+                </mat-form-field>
+                <button type="submit" mat-raised-button class="mat-primary right">Create</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>    
+

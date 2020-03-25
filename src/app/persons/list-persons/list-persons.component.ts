@@ -27,7 +27,7 @@ export class ListPersonsComponent implements OnInit {
     });
   }
 
-  private searchPersons() {
+  private searchPersons(): void {
     this._personsServices.searchPersons(this.keyword).subscribe((persons) => {
         this.persons = persons;
     });

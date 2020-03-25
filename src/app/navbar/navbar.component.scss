@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #ffffff;
     height: 80px;
     -webkit-box-shadow: 1px 1px 5px 0px rgba(84,83,84,1);
     -moz-box-shadow: 1px 1px 5px 0px rgba(84,83,84,1);
@@ -14,7 +13,7 @@
 }
 
 .search-bar {
-    width: 500px;
+    width: 700px;
     height: 100%;
     margin: auto;
 }
@@ -43,8 +42,4 @@
 
 :host::ng-deep .search-field .mat-icon {
     color: #ffffff;
-}
-
-.menu-right {
-    padding-right: 30px;
 }
