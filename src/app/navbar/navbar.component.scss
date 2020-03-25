@@ -1,0 +1,50 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ffffff;
+    height: 80px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(84,83,84,1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(84,83,84,1);
+    box-shadow: 1px 1px 5px 0px rgba(84,83,84,1);
+}
+
+.menu-left {
+    padding-left: 0;
+}
+
+.search-bar {
+    width: 500px;
+    height: 100%;
+    margin: auto;
+}
+
+.search-bar-form {
+    height: 100%;
+    padding-top: 6px;
+}
+
+.search-field {
+    width: 100%;
+}
+
+:host::ng-deep .mat-form-field-infix {
+    bottom: 3px;
+}
+
+:host::ng-deep .search-bar-form .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: 0;
+}
+
+:host::ng-deep .search-field .mat-mini-fab {
+    box-shadow: none;
+    background-color: rgb(255, 130, 47);;
+}
+
+:host::ng-deep .search-field .mat-icon {
+    color: #ffffff;
+}
+
+.menu-right {
+    padding-right: 30px;
+}
