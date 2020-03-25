@@ -1,1 +1,14 @@
-<p>list-persons works!</p>
+<div class="main-container">
+    <mat-card>
+        <mat-card-content>
+            <h3>Persons result:</h3>
+            <li>
+                <ul *ngFor="let person of persons">
+                    Name: {{ person.name }}<br />
+                    Group: {{ person.group.name }}
+                </ul>
+            </li>
+        </mat-card-content>
+    </mat-card>
+</div>    
+

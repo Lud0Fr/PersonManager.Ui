@@ -4,12 +4,12 @@
       <mat-menu #menu="matMenu">
         <a mat-menu-item routerLink="/persons">View persons</a>
         <a mat-menu-item routerLink="/person/new">New person</a>
-    </mat-menu>
+      </mat-menu>
     </div>
     <div class="search-bar">
       <div class="search-bar-form">
         <mat-form-field appearance="outline" class="search-field">
-          <input type="text" matInput placeholder="Find a person" maxlength="100" [(ngModel)]="search">
+          <input type="text" matInput placeholder="Search" maxlength="100" [(ngModel)]="keyword">
           <button type="button" mat-mini-fab matSuffix (click)="onSearchPersonClick()">
             <mat-icon>search</mat-icon>
           </button>

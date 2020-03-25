@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  search = '';
+  keyword = '';
 
   constructor(private _router: Router) { }
 
@@ -26,6 +26,6 @@ export class NavbarComponent implements OnInit {
   }
 
   searchPerson() {
-    this._router.navigate(['persons/'], {queryParams: {search: this.search}});
+    this._router.navigate(['persons/'], {queryParams: {keyword: this.keyword}});
   }
 }

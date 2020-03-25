@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonsService } from 'src/app/_services/persons.service';
+import { ActivatedRoute } from '@angular/router';
+import { PersonModel } from 'src/app/_models/person.model';
 
 @Component({
   selector: 'app-list-persons',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPersonsComponent implements OnInit {
 
-  constructor() { }
+  private keyword = '';
+  public persons: PersonModel[] = [];
 
-  ngOnInit() {
+  constructor(
+    private _route: ActivatedRoute,
+    private _personsServices: PersonsService) {
+      
   }
 
+  ngOnInit() {
+    this._route.queryParams.subscribe(params => {
+      this.keyword = params['keyword'] || '';
+      
+      this.searchPersons();
+    });
+  }
+
+  private searchPersons() {
+    this._personsServices.searchPersons(this.keyword).subscribe((persons) => {
+        this.persons = persons;
+    });
+  }
 }

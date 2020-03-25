@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { PersonsModule } from './persons/persons.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PersonsModule } from './persons/persons.module';
     NoopAnimationsModule,
     MaterialModule,
     FormsModule,
-    PersonsModule
+    PersonsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
